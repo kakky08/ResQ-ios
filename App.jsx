@@ -10,16 +10,9 @@ import MemoCreateScreen from './src/screens/MenoCreateScreen';
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDitailScreen from './src/screens/MemoDetailScreen';
 
-const Stack = createStackNavigator();
+import { firebaseConfig } from './env';
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDgED6oNTLznHC_U0ZCVMtG3ibc83ZYs4A',
-  authDomain: 'resq-de025.firebaseapp.com',
-  projectId: 'resq-de025',
-  storageBucket: 'resq-de025.appspot.com',
-  messagingSenderId: '459325654645',
-  appId: '1:459325654645:web:274ff7e33c43ffc6981a3c',
-};
+const Stack = createStackNavigator();
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
