@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        // 関数を先に定義しなくても大丈夫な様にルールを変更
+        "no-use-before-define" :0,
+        // ナビゲーションを使用する際に発生するエラーを除去(props: navigation)
+        "react/prop-types": ["error", { "ignore": ["navigation"] }]
+    }
+}
