@@ -1,23 +1,40 @@
-import React from 'reacr';
-import {
-  Text, View, StyleSheet, TextInput, TouchableOpacity, Alert,
-} from 'react-native';
+import React, { Component, useState } from 'react';
+import { arrayOf, string } from 'prop-types';
+import { View, Text, StyleSheet } from 'react-native';
 
-import defaultDataset from '../../dataset';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import defaultDataset from '../data/dataset';
 
 export default function ChatBotScreen() {
-
+  const [curentId, setCurentId] = useState('init');
+  /* const currentId = 'init'; * */
+  // const { curentId/* , db */ } = props;
+  const db = defaultDataset;
   return (
-    <View style={styles.cSection}>
-      <View style={styles.container}>
-        <Chats />
-        <AnswersList />
-      </View>
+    <View>
+      <Text>こんにちは</Text>
+      {/* console.log(defaultDataset[1]); */}
+      <Text>{db[curentId].answers[0].nextId}</Text>
+      <TouchableOpacity style={styles.button} onPress={() => setCurentId('neck_pain')}>
+        <Text>submit</Text>
+      </TouchableOpacity>
     </View>
-
   );
 }
 
-const styles = StyleSheet.create({
+ChatBotScreen.propTypes = {
+  // curentId: arrayOf(),
+  // db: arrayOf(),
+};
 
+ChatBotScreen.defaultProps = {
+  // curentId: ['init'],
+  // db: defaultDataset,
+};
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#ddd',
+    padding: 10,
+  },
 });
