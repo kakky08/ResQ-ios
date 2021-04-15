@@ -10,7 +10,8 @@ import MemoCreateScreen from './src/screens/MenoCreateScreen';
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDitailScreen from './src/screens/MemoDetailScreen';
 // import ChatBotScreen from './src/screens/ChatBotScreen';
-import NewTest from './src/screens/NewTest';
+// import NewTest from './src/screens/NewTest';
+import NewChatBot from './src/screens/NewChatBot';
 
 import { firebaseConfig } from './env';
 
@@ -27,7 +28,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="NewTest"
+        initialRouteName="NewChatBot"
         screenOptions={{
           headerStyle: { backgroundColor: '#467df3' },
           headerTitleStyle: { color: '#fff' },
@@ -58,7 +59,7 @@ export default function App() {
         <Stack.Screen name="MemoCreate" component={MemoCreateScreen} />
         <Stack.Screen name="MemoList" component={MemoListScreen} />
         <Stack.Screen name="MemoDitail" component={MemoDitailScreen} />
-        <Stack.Screen name="NewTest" class={NewTest} />
+        <Stack.Screen name="NewChatBot" class={NewChatBot} />
       </Stack.Navigator>
     </NavigationContainer>
   );
