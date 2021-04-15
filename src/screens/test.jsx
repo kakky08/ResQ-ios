@@ -1,6 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
-import { ChangeHistorySharp } from '@material-ui/icons';
+import { View, SectionList } from 'react-native';
 import defaultDataset from '../data/dataset';
 import TestChats from '../components/TestChats';
 import TestAnswersList from '../components/TestAnswersList';
@@ -32,7 +31,7 @@ export default class Test extends React.Component {
   displayNextQuestion(nextQuestionId) {
     const { chats } = this.state;
     const { dataset } = this.state;
-    ChangeHistorySharp.push({
+    chats.push({
       text: dataset[nextQuestionId].question,
       type: 'question',
     });
@@ -72,10 +71,10 @@ export default class Test extends React.Component {
     const { chats, answers } = this.state;
     return (
       <View>
-        <View>
+        <SectionList>
           <TestChats chats={chats} />
           <TestAnswersList answers={answers} select={this.selectAnswer} />
-        </View>
+        </SectionList>
       </View>
     );
   }

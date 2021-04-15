@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native-gesture-handler';
+// import { StyleSheet, View } from 'react-native-gesture-handler';
 import {
   arrayOf,
 } from 'prop-types';

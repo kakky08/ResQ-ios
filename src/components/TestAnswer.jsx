@@ -26,13 +26,13 @@ const styles = StyleSheet.create({
   button: {
     borderColor: '#FFB549',
     color: '#333',
-    fontWeight: 600,
-    marginBottom: '15px',
-    padding: '8px 15px',
-    '&:hover': {
+    /* fontWeight: 'bold', */
+    marginBottom: 15,
+    padding: 8,
+    /* '&:hover': {
       backgroundColor: '#FFB549',
       color: '#FFF',
-    },
+    }, */
   },
 });
 

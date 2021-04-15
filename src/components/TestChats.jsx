@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import List from '@material-ui/core/List';
 import { arrayOf } from 'prop-types';
 import TestChat from './TestChat';
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   chats: {
     height: 280,
     padding: 0,
-    overflow: 'auto',
+    overflow: 'scroll',
   },
 });
 
