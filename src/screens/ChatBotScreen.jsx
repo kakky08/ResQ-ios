@@ -7,6 +7,8 @@ import defaultDataset from '../data/dataset';
 
 export default function ChatBotScreen() {
   const [curentId, setCurentId] = useState('init');
+  const [chats, setChats] = useState([]);
+  const [answer, setAnswer] = useState([]);
   /* const currentId = 'init'; * */
   // const { curentId/* , db */ } = props;
   const db = defaultDataset;
@@ -20,6 +22,17 @@ export default function ChatBotScreen() {
       </TouchableOpacity>
     </View>
   );
+  function displayNextQestion(next) {
+    chats.push({
+      text: db[next].question,
+      type: 'question',
+    });
+
+    this.setState({
+      answer: db[next].answers,
+
+    })
+  }
 }
 
 ChatBotScreen.propTypes = {
